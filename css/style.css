@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --veryDarkGray: hsl(0, 0%, 17%);
+  --darkGray: hsl(0, 0%, 59%);
+  --inputFont: 18px;
+  --fontFamily: "Rubik", sans-serif;
+}
+
+.ipTracker {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.ipTracker > img {
+  width: 100vw;
+  height: 240px;
+}
+/**********************************Header**************************************/
+.ipTracker__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.ipTracker__header > h1 {
+  color: white;
+  font-family: var(--fontFamily);
+}
+
+.ipTracker__inputWrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-radius: 12px;
+  width: 35%;
+  min-width: 100px;
+  margin-top: 30px;
+}
+
+.ipTracker__inputWrapper__input {
+  flex: 0.85;
+  height: 100%;
+  border: none;
+  background-color: white;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  outline: none;
+  font-size: var(--inputFont);
+  font-family: var(--fontFamily);
+  padding: 8px;
+}
+
+.ipTracker__inputWrapper__enter {
+  flex: 0.15;
+  height: 100%;
+  background-color: var(--veryDarkGray);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+/*******************************Banner********************************/
+.ipTracker__banner {
+  border: 20px;
+  background-color: white;
+  width: 80%;
+  height: 120px;
+  z-index: 9999;
+  position: absolute;
+  top: calc(240px - 60px);
+  left: 10%;
+  border-radius: 15px;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+.ipTracker__banner__box {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.title {
+  color: var(--darkGray);
+  font-size: 11px;
+  font-weight: bold;
+  font-family: var(--fontFamily);
+}
+
+.divider {
+  height: 60px;
+  margin-right: 20px;
+  border-right: 1px solid var(--darkGray);
+}
+
+.content {
+  color: black;
+  font-family: var(--fontFamily);
+  font-weight: bold;
+  font-size: 18px;
+}
+/********xx*********************Banner**********************xx********/
+#map {
+  height: 60%;
+  width: 100vw;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  margin-top: 10px;
+  color: rgb(245, 21, 21);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 881px) {
+  .ipTracker > img {
+    height: 280px;
+  }
+  .ipTracker__banner {
+    width: 60%;
+    height: 220px;
+    top: calc(280px - 110px);
+    left: 20%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .ipTracker__banner__box {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .ipTracker__inputWrapper {
+    width: 60%;
+    margin-top: 30px;
+  }
+
+  .ipTracker__header > h1 {
+    font-size: 26px;
+  }
+
+  .ipTracker__inputWrapper__input {
+    flex: 0.8;
+    padding: 8px;
+  }
+
+  .ipTracker__inputWrapper__enter {
+    flex: 0.2;
+  }
+}
+
+@media (max-width: 547px) {
+  .ipTracker > img {
+    height: 280px;
+  }
+  .ipTracker__banner {
+    width: 80%;
+    height: 220px;
+    top: calc(280px - 110px);
+    left: 10%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .ipTracker__banner__box {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .ipTracker__inputWrapper {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .ipTracker__header > h1 {
+    font-size: 26px;
+  }
+
+  .ipTracker__inputWrapper__input {
+    flex: 0.8;
+    padding: 8px;
+  }
+
+  .ipTracker__inputWrapper__enter {
+    flex: 0.2;
+  }
+}
